@@ -1,6 +1,9 @@
-# Problem 1 solution
+# Problem 2 solution
 
+# import builtins
 import random
+import datetime
+# create data set
 data_set = []
 for i in range(1, 33):
     entry = []
@@ -9,5 +12,8 @@ for i in range(1, 33):
         entry.append(single_entry)
 
     data_set.append(entry)
-
-print(data_set)
+# store generated dataset to file, append mode
+f = open('dataset.txt', 'a')
+f.write('Data Set Generation Time: ' + str(datetime.datetime.now()) + '\n')
+f.write(str(data_set) + '\n\n')
+f.close()
